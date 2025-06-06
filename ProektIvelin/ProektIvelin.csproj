@@ -71,9 +71,9 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="VegetableContext.cs" />
-    <Compile Include="Vegetables.cs" />
-    <Compile Include="VegetableType.cs" />
+    <Compile Include="Data\VegetableContext.cs" />
+    <Compile Include="Data\Vegetables.cs" />
+    <Compile Include="Data\VegetableType.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
