@@ -8,18 +8,16 @@ namespace ProektIvelin.Controlers
 {
     public class VegetableTypeController
     {
-        private VegetableContext _VegetableContext;
+        private VegetableContext _vegetableContext = new VegetableContext();
 
-        public VegetableTypeController(int id)
+        public List<VegetableType> GetAllTypes()
         {
-            Vegetables findedVegetables = _VegetableContext.Vegetables.Find(id);
-            if (findedVegetables != null)
-            {
-                _VegetableContext.Entry(findedVegetables).Reference (x=>x.VegetableType).Load();
-            }
-           return;
+            return _vegetableContext.VegetableType.ToList();
         }
-
+        public string GetVegetableTypeById(int id)
+        {
+            return _vegetableContext.VegetableType.Find(id).Name;
+        }
 
 
     }
